@@ -19,14 +19,14 @@
 <ion-content padding>
 	<ion-item>
 		<ion-label floating>Correo electrónico</ion-label>
-		<ion-input type="email" ></ion-input>
+		<ion-input type="email" [(ngModel)]="email"></ion-input>
 	</ion-item>	
 	<ion-item>
 		<ion-label floating>Contraseña</ion-label>
-		<ion-input type="password" ></ion-input>
+		<ion-input type="password" [(ngModel)]="password"></ion-input>
 	</ion-item>	
 
 	<div class="form-item">
-		<button ion-button>Crear mi cuenta</button>
+		<button ion-button (click)="createAccount()">Crear mi cuenta</button>
 	</div>			
 </ion-content>
