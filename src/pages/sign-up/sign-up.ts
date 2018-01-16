@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { AngularFireAuth } from 'angularfire2/auth'; // llamamos la librería
 /**
  * Generated class for the SignUpPage page.
  *
@@ -19,7 +20,10 @@ export class SignUpPage {
 	password: string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+  						public navParams: NavParams,
+  						public angularFire: AngularFireAuth){
+  	//listamos una propiedad 
   }
 
   ionViewDidLoad() {
@@ -27,7 +31,8 @@ export class SignUpPage {
   }
 
   createAccount(){
-  	console.log(":)")
+  	this.angularFire.auth.createUserWithEmailAndPassword(this.email,this.password); 
+  	// crear usuarios en firebase
   }
 
 }

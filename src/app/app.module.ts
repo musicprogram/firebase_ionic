@@ -29,7 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireDatabaseModule
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
